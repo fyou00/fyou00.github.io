@@ -4,6 +4,9 @@ Selamat datang di repository saya
 ## Membuat web dengan jekyll
 
 1. Buat repository dengan nama akun
+```bash
+contoh: fyou00.github.io
+```
 2. Clone repo ssh ke lokal
 3. Masuk ke dalam folder repo kemudian install jekyll 
 ```bash
