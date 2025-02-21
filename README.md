@@ -8,7 +8,7 @@ Selamat datang di repository saya
 
 ## Installation
 
-Clone my-project with git clone
+Clone my-project with git clone SSH
 ```bash
   git clone git@github.com:fyou00/fyou00.github.io.git
   cd fyou00
