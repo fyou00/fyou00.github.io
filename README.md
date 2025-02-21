@@ -8,6 +8,8 @@ Selamat datang di repository saya
 contoh: fyou00.github.io
 ```
 2. Clone repo ssh ke lokal
+![alt text](https://github.com/fyou00/fyou00.github.io/blob/main/contoh2.jpg?raw=true)
+
 3. Masuk ke dalam folder repo kemudian install jekyll 
 ```bash
 gem install jekyll bundler
