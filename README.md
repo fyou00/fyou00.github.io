@@ -45,6 +45,7 @@ gem "jekyll"
 
 7. Jalankan perintah berikut untuk build web yang telah dibuat sehingga menghasilkan folder _site
 ```bash
+jekyll build
 jekyll serve -livereload
 ```
 
