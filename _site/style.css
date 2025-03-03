@@ -24,3 +24,8 @@
 .backtoindex {
   color: #854836; border-color: #854836; border-width: 3px;
 }
+
+.backtoindex:hover {
+  color: white;
+  background-color: #854836;
+}
