@@ -5,5 +5,5 @@ title: Friends
 # Friends page
 
 Berikut teman-teman saya di kelas:
-- [Maila Aziza](https://mailaaziza.github.io/)
+- [Maila Aziza](https://mailaazizaa.github.io/)
 - [Ilham Syahdienar](https://ilhamdienar.github.io/)
