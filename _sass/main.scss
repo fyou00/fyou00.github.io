@@ -1,8 +1,33 @@
+$primarycolor: #213448;
+$secondarycolor: #547792;
+// 94B4C1
+$textcolor: #ECEFCA;
+
 .current {
-  color: green;
+  color: $textcolor;
 }
 
 .last-name {
-  color: darkred;
+  color: $primarycolor;
   
+}
+
+.navbar {
+  background-color: $primarycolor;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar>a{
+  color: white;
+  text-decoration: none;
+  margin: 10px 0;
+  padding: 12px 10px;
+  border-color: $textcolor;
+  border-radius: 8px;
+}
+
+.navbar>a:hover {
+  background-color: $textcolor;
+  color: $primarycolor
 }
