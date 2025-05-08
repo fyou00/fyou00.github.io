@@ -2,14 +2,22 @@ $primarycolor: #213448;
 $secondarycolor: #547792;
 // 94B4C1
 $textcolor: #ECEFCA;
+$disable: #eee;
 
-.current {
-  color: $textcolor;
+*,
+html {
+    margin: 0;
+    padding: 0;
 }
+
+
 
 .last-name {
   color: $primarycolor;
-  
+}
+
+.container {
+  margin: 10px 20px;
 }
 
 .navbar {
@@ -18,7 +26,7 @@ $textcolor: #ECEFCA;
   justify-content: center;
 }
 
-.navbar>a{
+.navbar > a{
   color: white;
   text-decoration: none;
   margin: 10px 0;
@@ -27,7 +35,44 @@ $textcolor: #ECEFCA;
   border-radius: 8px;
 }
 
+.navbar > a.current {
+  color: $textcolor;
+}
+
 .navbar>a:hover {
   background-color: $textcolor;
   color: $primarycolor
+}
+
+.list-friends {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list-friends > li{
+  display: flex; /* opsional, tergantung isi dalam <li> */
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  margin: 8px 0 0 0;
+  background-color: $primarycolor;
+  border-radius: 5px;
+}
+
+.list-friends > li > a {
+  color: white;
+  text-decoration: none;
+}
+
+.list-friends > li > a.me {
+  color: $textcolor;
+  text-decoration: none;
+}
+
+.list-friends > li > a:hover {
+  color: $textcolor;
 }
