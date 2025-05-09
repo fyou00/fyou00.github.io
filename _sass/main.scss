@@ -1,78 +1,158 @@
-$primarycolor: #213448;
-$secondarycolor: #547792;
-// 94B4C1
-$textcolor: #ECEFCA;
-$disable: #eee;
+$primarycolor: #13171c;
+$secondarycolor: #231e2d;
+$active: #ad5dc1;
+$titlecolor: #dfe1e3;
+$textcolor: #c5c7ca;
+$navshadow: #090c0f;
 
 *,
 html {
-    margin: 0;
-    padding: 0;
-}
-
-
-
-.last-name {
-  color: $primarycolor;
-}
-
-.container {
-  margin: 10px 20px;
+	margin: 0;
+	padding: 0;
+	font-family: "Ubuntu", sans-serif;
+	background-color: $primarycolor;
+	color: $textcolor;
 }
 
 .navbar {
-  background-color: $primarycolor;
+	position: sticky;
+	top: 0;
+	background-color: $primarycolor;
+	display: flex;
+	justify-content: center;
+	box-shadow: 0 0 10px -2px $navshadow;
+}
+
+.navbar > li {
+	list-style-type: none;
+	margin: 10px 32px;
+	padding: 20px 10px;
+}
+
+.navbar > li > a {
+	color: white;
+	text-decoration: none;
+	border-color: $textcolor;
+	border-radius: 8px;
+}
+
+.navbar > li > a:hover {
+	text-decoration: underline;
+	color: $textcolor;
+}
+
+.navbar > li > a.current {
+	color: $active;
+}
+
+// ----------------------------- Home ------------------------------- //
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -10px; /* untuk kompensasi padding di kolom */
+	margin-right: -10px;
+}
+
+[class^="col-"] {
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+.col-1 {
+	width: 8.33%;
+}
+.col-2 {
+	width: 16.66%;
+}
+.col-3 {
+	width: 25%;
+}
+.col-4 {
+	width: 33.33%;
+}
+.col-5 {
+	width: 41.66%;
+}
+.col-6 {
+	width: 50%;
+}
+.col-7 {
+	width: 58.33%;
+}
+.col-8 {
+	width: 66.66%;
+}
+.col-9 {
+	width: 75%;
+}
+.col-10 {
+	width: 83.33%;
+}
+.col-11 {
+	width: 91.66%;
+}
+.col-12 {
+	width: 100%;
+}
+
+.hero {
+	height: 100vh;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
-.navbar > a{
-  color: white;
-  text-decoration: none;
-  margin: 10px 0;
-  padding: 12px 10px;
-  border-color: $textcolor;
-  border-radius: 8px;
+.container {
+	margin: 20px 140px;
 }
 
-.navbar > a.current {
-  color: $textcolor;
+.container > h1 {
+	color: $titlecolor;
 }
 
-.navbar>a:hover {
-  background-color: $textcolor;
-  color: $primarycolor
+.container p {
+	line-height: 1.5;
 }
+
+.profile-picture {
+	height: 300px;
+	width: 300px;
+	border-radius: 50%;
+}
+
+// ----------------------------- Friends ------------------------------- //
 
 .list-friends {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	list-style: none;
+	padding: 0;
+	margin: 0;
 }
 
-.list-friends > li{
-  display: flex; /* opsional, tergantung isi dalam <li> */
-  align-items: center;
-  justify-content: center;
-  padding: 8px 12px;
-  margin: 8px 0 0 0;
-  background-color: $primarycolor;
-  border-radius: 5px;
+.list-friends > li {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 8px 0 0 0;
 }
 
 .list-friends > li > a {
-  color: white;
-  text-decoration: none;
+	padding: 8px 12px;
+	background-color: $secondarycolor;
+	border-radius: 5px;
+	color: $textcolor;
+	text-decoration: none;
 }
 
 .list-friends > li > a.me {
-  color: $textcolor;
-  text-decoration: none;
+	color: $textcolor;
+	text-decoration: none;
 }
 
 .list-friends > li > a:hover {
-  color: $textcolor;
+	background-color: $active;
+	color: white;
 }
