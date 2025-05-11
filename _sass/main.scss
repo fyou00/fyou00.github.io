@@ -97,10 +97,14 @@ html {
 }
 
 .hero {
-	height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	height: 80vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.hero > .row {
+	align-items: center;
 }
 
 .container {
@@ -143,16 +147,56 @@ html {
 	padding: 8px 12px;
 	background-color: $secondarycolor;
 	border-radius: 5px;
-	color: $textcolor;
+	color: $active;
 	text-decoration: none;
 }
 
-.list-friends > li > a.me {
-	color: $textcolor;
-	text-decoration: none;
-}
+// .list-friends > li > a.me {
+// 	color: $textcolor;
+// 	text-decoration: none;
+// }
 
 .list-friends > li > a:hover {
 	background-color: $active;
 	color: white;
+}
+
+.namasaya {
+	font-size: 36px;
+	font-weight: bold;
+	background: linear-gradient(
+		90deg,
+		$active,
+		$titlecolor,
+		$active,
+		$titlecolor,
+		$active
+	);
+	background-size: 400% 100%;
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	animation: colorFlow 6s linear infinite;
+}
+
+@keyframes colorFlow {
+	0% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@media (max-width: 414px) {
+  .container {
+    margin: 20px 40px;
+  }
+	.list-friends > li > a {
+		padding: 8px 60px;
+		background-color: $secondarycolor;
+		border-radius: 5px;
+		color: $active;
+		text-decoration: none;
+	}
 }
