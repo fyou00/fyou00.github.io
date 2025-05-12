@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card Link dalam List</title>
+  <style>
+    ul.vertical-card {
+      list-style: none;
+      padding: 0;
+      margin: 0 auto;
+      max-width: 600px;
+    }
+
+    ul.vertical-card li {
+      margin-bottom: 20px;
+    }
+
+    ul.vertical-card li a {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    ul.vertical-card li a:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+  </style>
+</head>
+<body>
+  <ul class="vertical-card">
+    <li>
+      <a href="#detail1">
+        <h3>Judul Card 1</h3>
+        <p>Ini isi konten dalam card pertama.</p>
+      </a>
+    </li>
+    <li>
+      <a href="#detail2">
+        <h3>Judul Card 2</h3>
+        <p>Konten card kedua, klik untuk lihat lebih lanjut.</p>
+      </a>
+    </li>
+  </ul>
+</body>
+</html>
