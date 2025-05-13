@@ -47,64 +47,17 @@ html {
 
 // ----------------------------- Home ------------------------------- //
 
-.row {
-	display: flex;
-	flex-wrap: wrap;
-	margin-left: -10px; /* untuk kompensasi padding di kolom */
-	margin-right: -10px;
-}
-
-[class^="col-"] {
-	padding: 10px;
-	box-sizing: border-box;
-}
-
-.col-1 {
-	width: 8.33%;
-}
-.col-2 {
-	width: 16.66%;
-}
-.col-3 {
-	width: 25%;
-}
-.col-4 {
-	width: 33.33%;
-}
-.col-5 {
-	width: 41.66%;
-}
-.col-6 {
-	width: 50%;
-}
-.col-7 {
-	width: 58.33%;
-}
-.col-8 {
-	width: 66.66%;
-}
-.col-9 {
-	width: 75%;
-}
-.col-10 {
-	width: 83.33%;
-}
-.col-11 {
-	width: 91.66%;
-}
-.col-12 {
-	width: 100%;
-}
-
 .hero {
 	height: 80vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-}
-
-.hero > .row {
-	align-items: center;
+	.profile {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		gap: 4rem;
+	}
 }
 
 .container {
@@ -123,6 +76,33 @@ html {
 	height: 300px;
 	width: 300px;
 	border-radius: 50%;
+}
+
+.namasaya {
+	font-size: 36px;
+	font-weight: bold;
+	background: linear-gradient(
+		90deg,
+		$active,
+		$titlecolor,
+		$active,
+		$titlecolor,
+		$active
+	);
+	background-size: 400% 100%;
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	animation: colorFlow 6s linear infinite;
+}
+
+@keyframes colorFlow {
+	0% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 // ----------------------------- Friends ------------------------------- //
@@ -157,71 +137,75 @@ html {
 	}
 }
 
-.namasaya {
-	font-size: 36px;
-	font-weight: bold;
-	background: linear-gradient(
-		90deg,
-		$active,
-		$titlecolor,
-		$active,
-		$titlecolor,
-		$active
-	);
-	background-size: 400% 100%;
-	-webkit-background-clip: text;
-	background-clip: text;
-	color: transparent;
-	animation: colorFlow 6s linear infinite;
-}
-
-@keyframes colorFlow {
-	0% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
-
 @media (max-width: 414px) {
 	.container {
 		margin: 20px 40px;
 	}
 
-  .hero {
-    background-color: red;
-    .row {
-      background-color: blue;
-    }
-  }
-
 	.list-friends {
-		list-style: none;
-		padding: 0;
-		margin: 0 auto;
-		max-width: 600px;
-    display: block;
-    
+		display: block;
 		li {
-      display: block;
-      a {
-        display: block;
-				text-decoration: none;
-				color: $textcolor;
-				background-color: $secondarycolor;
-				border-radius: 10px;
-				padding: 20px;
-				box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-				transition: transform 0.2s ease, box-shadow 0.2s ease;
-			}
-
-			a:hover {
-				color: $active;
-				text-decoration: underline;
-				transform: translateY(-4px);
-				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+			display: block;
+			a {
+				display: block;
 			}
 		}
+	}
+}
+
+// ----------------------------- Blog ------------------------------- //
+
+// .card {
+//   background-color: $secondarycolor;
+//   max-width: 800px; /* Sesuaikan lebar maksimum sesuai kebutuhan */
+//   width: 100%;
+//   margin: 20px;
+//   padding: 12px;
+//   border-radius: 12px;
+//   color: red;
+// }
+
+// ul.blog {
+//   display: flex;
+//   list-style-type: none;
+//   li {
+//     background-color: $secondarycolor;
+//   }
+// }
+
+// .card a {
+//   background-color: $secondarycolor;
+//   color: blue;
+// }
+
+.post-list {
+  list-style-type: none;
+}
+
+.post-item {
+	margin-bottom: 2rem;
+	padding: 1rem;
+	border-left: 3px solid $active;
+	background: rgba(0, 0, 0, 0.3);
+	margin-left: 0; // Hapus margin kiri
+	max-width: 100%;
+	margin: 1rem 2rem; // Ganti dengan margin yang seragam
+}
+
+h2 a {
+	color: $active;
+	font-size: 1.5rem;
+	text-decoration: none;
+	position: relative;
+
+	&::after {
+		content: "";
+		position: absolute;
+		width: 0;
+		height: 2px;
+		bottom: -4px;
+		left: 0;
+		background-color: $active;
+		transition: width 0.3s ease;
 	}
 }
