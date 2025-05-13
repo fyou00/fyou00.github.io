@@ -126,36 +126,6 @@ html {
 }
 
 // ----------------------------- Friends ------------------------------- //
-@media (max-width: 414px) {
-	.container {
-		margin: 20px 40px;
-	}
-
-	// .list-friends {
-	// 	list-style: none;
-
-	// 	li {
-	// 		a {
-	// 			display: flex;
-	// 			justify-content: center;
-	// 			text-decoration: none;
-	// 			color: $textcolor;
-	// 			background-color: $secondarycolor;
-	// 			border-radius: 10px;
-	// 			padding: 20px;
-	// 			box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-	// 			transition: transform 0.2s ease, box-shadow 0.2s ease;
-	// 		}
-
-	// 		a:hover {
-	// 			color: $active;
-	// 			text-decoration: underline;
-	// 			transform: translateY(-4px);
-	// 			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-	// 		}
-	// 	}
-	// }
-}
 
 .list-friends {
 	list-style: none;
@@ -179,7 +149,7 @@ html {
 		}
 
 		a:hover {
-      color: $active;
+			color: $active;
 			text-decoration: underline;
 			transform: translateY(-4px);
 			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -211,5 +181,47 @@ html {
 	}
 	100% {
 		background-position: 0% 50%;
+	}
+}
+
+@media (max-width: 414px) {
+	.container {
+		margin: 20px 40px;
+	}
+
+  .hero {
+    background-color: red;
+    .row {
+      background-color: blue;
+    }
+  }
+
+	.list-friends {
+		list-style: none;
+		padding: 0;
+		margin: 0 auto;
+		max-width: 600px;
+    display: block;
+    
+		li {
+      display: block;
+      a {
+        display: block;
+				text-decoration: none;
+				color: $textcolor;
+				background-color: $secondarycolor;
+				border-radius: 10px;
+				padding: 20px;
+				box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+				transition: transform 0.2s ease, box-shadow 0.2s ease;
+			}
+
+			a:hover {
+				color: $active;
+				text-decoration: underline;
+				transform: translateY(-4px);
+				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+			}
+		}
 	}
 }

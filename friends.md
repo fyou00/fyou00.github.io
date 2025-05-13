@@ -8,7 +8,7 @@ title: Friends
 Berikut teman-teman saya di kelas:
 <br>
 
-<ul class="list-friends">
+<ol class="list-friends">
   <li><a href="https://lepii1.github.io/">Ahmad Aulia Fahlevi</a></li>
   <li><a href="https://alvi0syahril.github.io/">Alvi Syahril</a></li>
   <li><a href="https://bunga-hub.github.io/">Bunga Alfa Zahrah</a></li>
@@ -37,4 +37,4 @@ Berikut teman-teman saya di kelas:
   <li><a href="https://maishazahrani.github.io/">Maisha Zahrani</a></li>
   <li><a href="https://maliaulfa2.github.io/">Malia Ulfa</a></li>
   <li><a href="https://fyou00.github.io/friends.html" class="me">Muhammad Fathurrahman</a></li>
-</ul>
+</ol>
