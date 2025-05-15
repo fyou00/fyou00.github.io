@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }}</title>
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
-  <!-- <link rel="icon" href="{{ site.baseurl }}/assets/image/style.css"> -->
+  <link rel="icon" href="{{ site.baseurl }}/assets/images/favicon.ico">
   <script src="{{ site.baseurl }}/assets/js/script.js"></script>
 
   <!-- font -->
@@ -19,10 +19,18 @@
 </head>
   
 <body>
-  {% include navigation.html %} 
+  <nav>
+    {% include navigation.html %} 
+  </nav>
   <div class="container">
-    {{ content }}
+    <main>
+      {{ content }}
+    </main>
   </div>
+
+  <footer>
+    <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
+  </footer>
 </body>
 
 </html>
