@@ -1,0 +1,9 @@
+title: Home
+baseurl: ""
+url: "https://fyou00.github.io"
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+theme: null
