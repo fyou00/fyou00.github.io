@@ -1,6 +1,6 @@
 $primarycolor: #13171c;
-$secondarycolor: #231e2d;
 $active: #ad5dc1;
+$disable: #231e2d;
 $titlecolor: #dfe1e3;
 $textcolor: #c5c7ca;
 $navshadow: #090c0f;
@@ -10,8 +10,11 @@ html {
 	margin: 0;
 	padding: 0;
 	font-family: "Ubuntu", sans-serif;
-	background-color: $primarycolor;
 	color: $textcolor;
+}
+
+body {
+	background-color: $primarycolor;
 }
 
 .navbar {
@@ -23,13 +26,13 @@ html {
 	box-shadow: 0 0 10px -2px $navshadow;
 }
 
-.navbar > li {
+.navbar li {
 	list-style-type: none;
 	margin: 10px 32px;
 	padding: 20px 10px;
 }
 
-.navbar > li > a {
+.navbar li a {
 	color: white;
 	text-decoration: none;
 	border-color: $textcolor;
@@ -41,7 +44,7 @@ html {
 	color: $textcolor;
 }
 
-.navbar > li > a.current {
+.navbar li a.current {
 	color: $active;
 }
 
@@ -84,9 +87,9 @@ html {
 	background: linear-gradient(
 		90deg,
 		$active,
-		$titlecolor,
+		$textcolor,
 		$active,
-		$titlecolor,
+		$textcolor,
 		$active
 	);
 	background-size: 400% 100%;
@@ -112,6 +115,7 @@ html {
 	display: flex;
 	gap: 10px;
 	flex-wrap: wrap;
+	justify-content: center;
 
 	li {
 		display: flex;
@@ -121,7 +125,7 @@ html {
 		a {
 			text-decoration: none;
 			color: inherit;
-			background: $secondarycolor;
+			background: $disable;
 			border-radius: 10px;
 			padding: 20px;
 			box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -147,7 +151,8 @@ html {
 		li {
 			display: block;
 			a {
-				display: block;
+				display: flex;
+				justify-content: center;
 			}
 		}
 	}
@@ -155,57 +160,48 @@ html {
 
 // ----------------------------- Blog ------------------------------- //
 
-// .card {
-//   background-color: $secondarycolor;
-//   max-width: 800px; /* Sesuaikan lebar maksimum sesuai kebutuhan */
-//   width: 100%;
-//   margin: 20px;
-//   padding: 12px;
-//   border-radius: 12px;
-//   color: red;
-// }
+.card {
+	display: block;
+	padding: 1.5rem;
+	background-color: $disable;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+	color: inherit;
+	text-decoration: none;
+}
 
-// ul.blog {
-//   display: flex;
-//   list-style-type: none;
-//   li {
-//     background-color: $secondarycolor;
-//   }
-// }
+.card li a:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
 
-// .card a {
-//   background-color: $secondarycolor;
-//   color: blue;
-// }
+.card li {
+	padding: 0; /* hilangkan padding karena sudah di dalam <a> */
+}
 
 .post-list {
-  list-style-type: none;
+	list-style-type: none;
 }
 
 .post-item {
+	border-radius: 12px;
 	margin-bottom: 2rem;
 	padding: 1rem;
-	border-left: 3px solid $active;
+	border-left: 8px solid $disable;
 	background: rgba(0, 0, 0, 0.3);
-	margin-left: 0; // Hapus margin kiri
-	max-width: 100%;
-	margin: 1rem 2rem; // Ganti dengan margin yang seragam
+	margin: 1rem 2rem;
 }
 
-h2 a {
-	color: $active;
-	font-size: 1.5rem;
-	text-decoration: none;
-	position: relative;
+.post-item:hover {
+	border-left: 8px solid $active;
+}
 
-	&::after {
-		content: "";
-		position: absolute;
-		width: 0;
-		height: 2px;
-		bottom: -4px;
-		left: 0;
-		background-color: $active;
-		transition: width 0.3s ease;
-	}
+.post-item a {
+	text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.post-item a:hover {
+	text-decoration: underline;
 }
