@@ -1,36 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>{{ page.title }}</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }}</title>
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
-  <link rel="icon" href="{{ site.baseurl }}/assets/images/favicon.ico">
-  <script src="{{ site.baseurl }}/assets/js/script.js"></script>
+		<!-- Stylesheet -->
+		<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css" />
 
-  <!-- font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+		<!-- Favicon -->
+		<link rel="icon" href="{{ site.baseurl }}/assets/images/favicon.ico" />
 
-  {% feed_meta %}
-  {% seo %}
-</head>
-  
-<body>
-  <nav>
-    {% include navigation.html %} 
-  </nav>
-  <div class="container">
-    <main>
-      {{ content }}
-    </main>
-  </div>
+		<!-- JavaScript -->
+		<script src="{{ site.baseurl }}/assets/js/scripts.js"></script>
 
-  <footer>
-    <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
-  </footer>
-</body>
+		<!-- plugins -->
+		{% feed_meta %} {% seo %}
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<img
+					src="{{ site.baseurl }}/assets/images/profile.png"
+					alt="Profile Picture"
+					class="profile-picture"
+				/>
+				<h1>{{ site.title }}</h1>
+				<p>{{ site.description }}</p>
+			</header>
 
+			<nav>{% include navigation.html %}</nav>
+
+			<main>{{ content }}</main>
+
+			<footer>
+				<p>
+					&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights
+					reserved.
+				</p>
+			</footer>
+		</div>
+	</body>
 </html>
