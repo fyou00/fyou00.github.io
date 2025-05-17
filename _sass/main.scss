@@ -1,236 +1,87 @@
-$primarycolor: #13171c;
-$active: #ad5dc1;
-$disable: #231e2d;
-$titlecolor: #dfe1e3;
-$textcolor: #c5c7ca;
-$navshadow: #090c0f;
+$primary-color: #3b7b3a;
+$secondary-color: #fbbc05;
+$font-stack: Helvetica, sans-serif;
 
-*,
-html {
+body,
+h1,
+h2,
+p {
 	margin: 0;
 	padding: 0;
-	color: $textcolor;
+	box-sizing: border-box;
 }
 
 body {
-	font-family: "Ubuntu", sans-serif;
-	background-color: $primarycolor;
-	display: flex;
-	flex-direction: column;
+	font-family: $font-stack;
+	background-color: #f4f4f4;
+	line-height: 1.6;
+}
+
+header {
+	text-align: center;
+	padding: 24px;
+	background-color: $primary-color;
+	color: #fff;
 }
 
 main {
-	flex: 1;
-	padding: 20px;
+	padding: 24px;
+	background-color: #fff;
+	margin-top: 24px;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
 
 footer {
-	background-color: $primarycolor;
-	color: white;
 	text-align: center;
-	padding: 10px;
-	box-shadow: 0 0 10px -2px $navshadow;
+	padding: 8px;
+	background-color: $primary-color;
+	color: #fff;
+	margin-top: 24px;
 }
 
-.navbar {
-	position: sticky;
-	top: 0;
-	background-color: $primarycolor;
-	display: flex;
-	justify-content: center;
-	box-shadow: 0 0 10px -2px $navshadow;
+h2 {
+	color: #333;
+	margin-bottom: 8px;
 }
 
-.navbar li {
-	list-style-type: none;
-	margin: 10px 32px;
-	padding: 20px 10px;
-}
-
-.navbar li a {
-	color: white;
-	text-decoration: none;
-	border-color: $textcolor;
-	border-radius: 8px;
-}
-
-.navbar > li > a:hover {
-	text-decoration: underline;
-	color: $textcolor;
-}
-
-.navbar li a.current {
-	color: $active;
-}
-
-// ----------------------------- Home ------------------------------- //
-
-.hero {
-	height: 80vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	.profile {
-		display: flex;
-		justify-content: space-around;
-		align-items: center;
-		gap: 4rem;
+nav {
+	margin: 24px 0;
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: $primary-color;
 	}
-}
-
-.container {
-	margin: 20px 140px;
-}
-
-.container > h1 {
-	color: $titlecolor;
-}
-
-.container p {
-	line-height: 1.5;
-}
-
-.profile-picture {
-	height: 300px;
-	width: 300px;
-	border-radius: 50%;
-}
-
-.namasaya {
-	font-size: 36px;
-	font-weight: bold;
-	background: linear-gradient(
-		90deg,
-		$active,
-		$textcolor,
-		$active,
-		$textcolor,
-		$active
-	);
-	background-size: 400% 100%;
-	-webkit-background-clip: text;
-	background-clip: text;
-	color: transparent;
-	animation: colorFlow 6s linear infinite;
-}
-
-@keyframes colorFlow {
-	0% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
-
-// --------------------------- Home Mobile ----------------------------- //
-@media (max-width: 414px) {
-}
-
-// ----------------------------- Friends ------------------------------- //
-
-.list-friends {
-	list-style: none;
-	display: flex;
-	gap: 10px;
-	flex-wrap: wrap;
-	justify-content: center;
-
 	li {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		margin: 8px 0 0 0;
+		float: left;
 		a {
-			text-decoration: none;
-			color: inherit;
-			background: $disable;
-			border-radius: 10px;
-			padding: 20px;
-			box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-			transition: transform 0.2s ease, box-shadow 0.2s ease;
-		}
-
-		a:hover {
-			color: $active;
-			text-decoration: underline;
-			transform: translateY(-4px);
-			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-		}
-	}
-}
-
-@media (max-width: 414px) {
-	.container {
-		margin: 20px 40px;
-	}
-
-	.list-friends {
-		display: block;
-		li {
 			display: block;
-			a {
-				display: flex;
-				justify-content: center;
+			color: white;
+			text-align: center;
+			padding: 8px 16px;
+			text-decoration: none;
+			&:hover:not(.active) {
+				background-color: $secondary-color;
 			}
 		}
 	}
 }
 
-// ----------------------------- Blog ------------------------------- //
-
-.card {
-	display: block;
-	padding: 1.5rem;
-	background-color: $disable;
-	border-radius: 8px;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-	transition: transform 0.2s ease, box-shadow 0.2s ease;
-	color: inherit;
-	text-decoration: none;
+.container {
+	width: 80%;
+	margin: auto;
+	overflow: hidden;
 }
 
-.card li a:hover {
-	transform: translateY(-2px);
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+.profile-picture {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	margin: 24px auto;
+	background-color: $secondary-color;
 }
 
-.card li {
-	padding: 0; /* hilangkan padding karena sudah di dalam <a> */
-}
-
-.post-list {
-	list-style-type: none;
-}
-
-.post-item {
-	border-radius: 12px;
-	margin-bottom: 2rem;
-	padding: 1rem;
-	border-left: 8px solid $disable;
-	background: rgba(0, 0, 0, 0.3);
-	margin: 1rem 2rem;
-}
-
-.post-item a {
-	font-size: 24px;
-	:hover {
-		color: $active;
-	}
-}
-
-.post-item:hover {
-	border-left: 8px solid $active;
-}
-
-.post-item a {
-	text-decoration: none;
-}
-
-.post-item a:hover {
-	text-decoration: underline;
-}
-
-.post-date {
-	margin: 12px 0;
+.active {
+	background-color: $secondary-color;
 }
