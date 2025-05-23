@@ -8,7 +8,9 @@ Penjelasan tentang link dan list pada HTML.
 <!-- ![html link dan list](/assets/images/logohtml.png) -->
 ### 1. Link (Tautan) pada HTML
 Tag yang digunakan untuk membuat link adalah <a> <br>
-`<a href="#">Teks atau elemen yang bisa diklik</a>`
+```bash
+<a href="#">Teks atau elemen yang bisa diklik</a>
+```
 <hr>
 ### 2. Lists (Daftar) pada HTML
 Lists digunakan untuk menyusun konten secara terstruktur dalam format daftar. HTML menyediakan tiga jenis utama daftar:
