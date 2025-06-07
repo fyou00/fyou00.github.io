@@ -1,0 +1,60 @@
+---
+layout: post
+title: "Personal Web dengan Jekyll dan GitHub Page"
+author: "Muhammad Fathurrahman"
+---
+Langkah-Langkah Membuat Personal Web dengan Jekyll dan GitHub Page
+
+---
+## Langkah-Langkah Membuat Personal Web
+
+Untuk membuat personal web dengan Jekyll dan publish di GitHub Page ikuti langkah-langkah berikut ini:
+1. Buat akun di GitHub dengan username sesuai nama masing-masing.
+2. Buat repository baru dengan nama username dan github.io contoh: \
+jika username nya adalah `fyou00`\
+maka nama repository buat seperti ini `fyou00.github.io`
+3. Clone repository tersebut ke lokal
+```bash
+git@github.com:fyou00/fyou00.github.io.git
+```
+4. Masuk ke dalam folder repository tersebut kemudian install Jekyll dengan perintah berikut melaui terminal
+```bash
+gem install jekyll bundler
+```
+5. Jalankan perintah bundle init untuk inisialisasi folder terebut sebagai proyek
+  jekyll seperti perintah berikut ini. Hasil dari perintah tersebut adalah file baru
+  dengan nama Gemfile.
+```bash
+bundle init
+```
+
+6. Edit file `Gemfile` dan tambahkan kode berikut pada baris paling bawah
+```bash
+gem "jekyll"
+```
+
+7. Buat file baru dengan nama index.html, kemudian isi dengan struktur dasar HTML
+8. Jalankan jekyll build untuk build web yang telah dibuat sehingga menhasilkan
+  directory _site.
+```bash
+jekyll build
+```
+9.Kemudian jalankan perintah jekyll serve untuk menjalankan web yang telah
+  dibuat di web browser dengan alamat http://localhost:4000 atau 127.0.0.1:4000
+```bash
+jekyll serve
+```
+
+10. Jika web telah berhasil dibuka, edit file Gemfile.lock dengan menambahkan
+  platform linux pada bagian platform seperti pada gambar berikut.
+```bash
+PLATFORMS
+  x86_64-linux
+```
+
+11. Untuk push repositori ke GitHub ketik perintah-perintah berikut
+```bash
+git add .
+git commit -m "isi pesan commit"
+git push
+```
