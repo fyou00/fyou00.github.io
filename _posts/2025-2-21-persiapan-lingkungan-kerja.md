@@ -2,10 +2,19 @@
 layout: post
 title: "Personal Web dengan Jekyll dan GitHub Page"
 ---
+# 1. Instalasi Ruby dan Jekyll
+## a. Download Ruby Installer
+- Silahkan download Ruby Installer melalui link berikut:
+> https://rubyinstaller.org
+- Pilih versi **Ruby 2.7.0** atau lebih tinggi
+- Install dan ikuti instruksi hingga selesai
+- Centang opsi untuk menambahkan Ruby ke PATH saat instalasi
+- Cek apakah ruby sudah terinstall
+```ruby -v``` dan RubyGems ```gem -v```
 
-Personal Web dengan Jekyll dan GitHub Page
+# 2. Personal Web dengan Jekyll dan GitHub Page
 
-Untuk membuat personal web dengan Jekyll dan publish di GitHub Page ikuti langkahlangkah berikut ini:
+Untuk membuat personal web dengan Jekyll dan publish di GitHub Page ikuti langkah-langkah berikut ini:
 - Buat akun di GitHub dengan username sesuai nama masing-masing.
 - Buat repository baru dengan nama username dan github.io.
 username github = fyou00, maka nama repositorinya fyou00.github.io.
@@ -20,6 +29,7 @@ dengan nama Gemfile.
 ```bash
 bundle init
 ```
+
 - Edit file Gemfile dan tambahkan kode berikut pada baris paling bawah
 ```bash
 gem "jekyll"
@@ -37,8 +47,6 @@ dibuat di web browser dengan alamat http://localhost:4000 atau 127.0.0.1:4000
 jekyll serve
 ```
 
-> tsasdasdasd
-
 - Jika web telah berhasil dibuka, edit file Gemfile.lock dengan menambahkan
 platform linux pada bagian platform seperti pada gambar berikut.
 ```bash
@@ -49,6 +57,6 @@ PLATFORMS
 - Untuk push repositori ke GitHub ketik perintah-perintah berikut
 ```bash
 git add .
-git commit -m "pub: fist publish"
+git commit -m "isi pesan commit"
 git push
 ```
