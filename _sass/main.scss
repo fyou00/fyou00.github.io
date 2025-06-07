@@ -1,5 +1,6 @@
 $primary-color: #3b7b3a;
 $secondary-color: #fbbc05;
+$highlight: #F6F8FA;
 $font-stack: Helvetica, sans-serif;
 
 body,
@@ -84,4 +85,9 @@ nav {
 
 .active {
 	background-color: $secondary-color;
+}
+
+.highlight {
+	background-color: $highlight;
+	padding: 1px 12px;
 }
