@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Instalasi Ruby dan Jekyll"
+title: "Pertemuan 1"
 author: "Muhammad Fathurrahman"
 ---
 
