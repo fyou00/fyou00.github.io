@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Personal Web dengan Jekyll dan GitHub Page"
+title: "Pertemuan 2"
 author: "Muhammad Fathurrahman"
 ---
 Langkah-Langkah Membuat Personal Web dengan Jekyll dan GitHub Page
@@ -57,4 +57,44 @@ PLATFORMS
 git add .
 git commit -m "isi pesan commit"
 git push
+```
+
+---
+
+## Membuat List Teman
+- Ubah file `index.html` yang telah dibuat sebelumnya menjadi:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Nama: Muhammad Fathurrahman</h1>
+    <p>Deskripsi Diri: Saya merupakan mahasiswa semester 2 prodi Teknik Informatika di Politeknik Negeri Lhokseumawe.<br> 
+
+      Saya lahir di Lhokseumawe pada 30 Januari 2006.</p>
+       <h2>Berikut list Teman-teman saya di kelas:</h2>
+       <ul>
+        <li><a href="https://fyou00.github.io/" target="_blank">Muhammad Fathurrahman</a></li>
+       </ul> 
+</body>
+</html>
+```
+
+- Untuk membuat list teman, buat file baru dengan nama `friends.md`, kemudian isi dengan kode berikut:
+
+```markdown
+---
+layout: default
+title: Friends
+---
+# Friends page
+
+Berikut teman-teman saya di kelas:
+- [Muhammad Fathurrahman](https://fyou00.github.io/)
+- ...
 ```
