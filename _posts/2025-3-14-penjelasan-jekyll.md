@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Pertemuan 3"
+title: "Belajar Jekyll: Halaman Default, Liquid, dan Front Matter"
 author: "Muhammad Fathurrahman"
 ---
 
@@ -77,7 +77,7 @@ title: "Judul Halaman"
 
 ---
 
-### Penjelasan Liquid
+## Penjelasan Liquid
 
 Liquid adalah bahasa template yang digunakan Jekyll untuk menampilkan data dinamis. Contoh sintaks Liquid:
 
@@ -99,7 +99,7 @@ Contoh:
 
 ---
 
-### Penjelasan Front Matter
+## Penjelasan Front Matter
 
 Front Matter adalah blok YAML di bagian atas file Markdown atau HTML yang digunakan untuk mendefinisikan metadata, seperti layout, title, dan lainnya. Contoh:
 

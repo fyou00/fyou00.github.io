@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Pertemuan 2"
+title: "Personal Web dengan Jekyll dan GitHub Page"
 author: "Muhammad Fathurrahman"
 ---
 Langkah-Langkah Membuat Personal Web dengan Jekyll dan GitHub Page
