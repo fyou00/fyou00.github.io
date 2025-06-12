@@ -1,5 +1,5 @@
-$primary-color: #5A827E;
-$secondary-color: #B9D4AA;
+$primary-color: #254D70;
+$secondary-color: #131D4F;
 $highlight: #F6F8FA;
 $font-stack: Helvetica, sans-serif;
 
@@ -90,4 +90,25 @@ nav {
 .highlight {
 	background-color: $highlight;
 	padding: 1px 12px;
+}
+
+.post-list {
+	list-style-type: none;
+	.post-item {
+		background-color: $highlight;
+		border: 1px solid #ddd;
+		padding: 16px;
+		margin-bottom: 16px;
+		border-radius: 8px;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		border-left: 4px solid $primary-color;
+		a {
+			text-decoration: none;
+			color: $primary-color;
+			&:hover {
+				text-decoration: underline;
+				background-color: lighten($highlight, 90%);
+			}
+		}
+	}
 }
