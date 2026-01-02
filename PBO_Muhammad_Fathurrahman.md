@@ -23,11 +23,15 @@ Soal UAS (Pemrograman Berorientasi Objek)
 2. Sebutkan 4 pilar dari OOP, kemudian jelaskan kegunaannya dan berikan 1 contoh penerapannya.
    Jawaban:
    1. Abstraction
+        Menyederhanakan suatu proses rumit dan hanya menampilkan interface yang simpel ke user. Singkatnya user hanya perlu tau "apa" yang dilakuin sesuatu bukan gimana. Kegunaannya untuk membuat sesuatu yang rumit menjadi lebih gampang dipahami.
+        Contoh:
+        Saat kita ingin membuka suatu website, kita hanya perlu mengetik url nya saja seperti google.com tanpa perlu tau apa yang sebenarnya terjadi kayak DNS Lookup, HTTP Request/Response, dll.
    2. Enkapsulation
-        Proses merahasiakan atribut atau fungsi ke dalam sebuah class. Kegunaannya adalah membatasi akses atribut oada suatu class agar tidak bisa diakses oleh class lain.
+        Proses merahasiakan atribut atau fungsi ke dalam sebuah class. Kegunaannya untuk membatasi akses atribut oada suatu class agar tidak bisa diakses oleh class lain.
         Contoh:
         Pada game Minecraft, terdapat status kelaparan kita sebut sebagai hungerLevel. Atribut hungerLevel dibuat sebagai private. Jadi, player hanya dapat mengubah nilai dari hungerLevel dengan cara mentrigger method eat() untuk menambah atau method run() untuk mengurangi.
     3. Inheritance
+
     4. Polymorphism
 
 3. Sebagai Software Engineer, kita dituntut untuk bisa memodelkan aplikasi yang akan dikembangkan agar tidak keluar dari perencanaan dan kebutuhan. Modelkanlah suatu aplikasi sederhana dengan konsep OOP (minimal mengaplikasikan 2 konsep OOP) dalam bentuk class diagram. Kemudian jelaskanlah diagram tersebut dengan menyebutkan bagian mana yang menggunakan konsep apa dari OOP.
