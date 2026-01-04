@@ -15,11 +15,34 @@
 Soal UAS (Pemrograman Berorientasi Objek)
 1. Apa perbedan OOP dan Pemrograman Prosedural?
    Jawaban:
-   Berikut perbedaan OOP dan Procedural Programming yang akan saya jabarkan dalam bentuk tabel
+   Object Oriented Programming lebih berfokus pada penyusunan kode berdasarkan objek (benda). Kita memandang sekumpulan program sebagai objek yang saling berinteraksi seperti dunia nyata.
+   &nbsp;
+
+   Procedural Programming berfokus pada serangkaian instruksi langkah demi langkah atau berurutan yang harus dieksekusi untuk menyesaikan suatu masalah. Urutan intruksi dari atas ke bawah untuk mencapai hasil akhir.
+
    | OOP | Procedural Programming |
    |---|---|
-   | Lorem ipsum dolor sit amet | Langkah demi langkah |
-   | Lorem ipsum dolor sit amet | Bekerja secara berurutan untuk menyelesaikan blok code |
+   | Penyusunan kode berdasarkan objek | Urutan instruksi |
+   |  Dibungkus dalam Class | Dibagi menjadi unit unit kecil (fungsi) |
+   
+   Contoh Procedural vs OOP dalam pembuatan telur dadar 
+   - Procedural Programming:
+        1. Siapkan wajan
+        2. Siapkan wadah
+        3. Pecahkan telur
+        4. Lalu masukkan royco
+        5. Kocok telur
+        6. Nyalakan kompor
+        7. Masak
+        8. Sajikan
+    - Object Oriented Programming
+        1. Buat Class `Koki`, `Bahan`, `Alat`
+        2. Buat Objek `Bahan` (Telur, Royco)
+        3. Buat Objek `Alat` (Wajan, Kompor)
+        4. Panggil Objek `Koki` untuk melakukan method bikinTelurDadar()
+        5. Sajikan
+    &nbsp;
+
 2. Sebutkan 4 pilar dari OOP, kemudian jelaskan kegunaannya dan berikan 1 contoh penerapannya.
    Jawaban:
    1. Abstraction
@@ -35,7 +58,7 @@ Soal UAS (Pemrograman Berorientasi Objek)
     3. Inheritance
         Mekanisme dimana sebuah class dapat mewarisi atribut dan method ke class lain. Jadi itu seperti membuat class baru menggunakan blueprint berdasarkan class yang udah ada. Kegunaannya untuk menghemat baris kode, membuat kode jadi efisien, dan mudah dibaca.
         Contohnya:
-        Class Mob memiliki atribut health, speed. Dan memiliki method bawaan walk().
+        Class `Mob` memiliki atribut health, speed, dan memiliki method bawaan walk(). Contoh class yang diturunkan:
         a. Class Creeper
          - mewarisi `health` dan `speed`
          - atribut tambahan yaitu `explodeRadius`
@@ -47,7 +70,14 @@ Soal UAS (Pemrograman Berorientasi Objek)
         - method baru: `dicukur()`
         &nbsp;
     4. Polymorphism
-        blom ada jawaban
+        Class memiliki banyak perilaku berbeda dari satu method yang sama, tergantung pada objek mana yang memanggilnya. Polymorph memiliki 2 cara penerapan:
+        1. Overriding &rarr; Method di Child class memiliki nama method yang sama dengan Parent class tapi perilaku berbeda. Child class mengubah cara kerja method yang diwarisi dari parent class karena child class punya "versi sendiri" yang unik. 
+        2. Overload &rarr; Method dengan nama yang sama di class yang sama, tetapi parameternya berbeda. 
+    
+        Kegunaannya
+        Contohnya: 
+        Method attack() akan berbeda perilakunya objek mana yang memanggil. Saat Objek Pemanah manggil method attack() maka dia akan menyerang dengan menembak anak panah, sedangkan Penyihir akan menyerang dengan mantra.
+
         &nbsp;
 3. Sebagai Software Engineer, kita dituntut untuk bisa memodelkan aplikasi yang akan dikembangkan agar tidak keluar dari perencanaan dan kebutuhan. Modelkanlah suatu aplikasi sederhana dengan konsep OOP (minimal mengaplikasikan 2 konsep OOP) dalam bentuk class diagram. Kemudian jelaskanlah diagram tersebut dengan menyebutkan bagian mana yang menggunakan konsep apa dari OOP.
    Jawaban:
@@ -67,6 +97,13 @@ Soal UAS (Pemrograman Berorientasi Objek)
     &nbsp;
     Di pertemuan berikutnya saya mempelajari tentang Konsep OOP
     Sistem dirancang dengan membungkusnya (encapsulate) menjadi kelompok data atau method. Yang dimana dapat mewarisi (inheritance) atribut dan method komponen lain. Sifatnya saling berinteraksi. 
+    &nbsp;
+    
+    Kelebihan OOP
+    - Reusabilty &rarr; dapat digunakan lagi di program lain
+    - Maintanabilitu &rarr; mudah dibaca dan dikelola
+    - 
+
     &nbsp;
     4 Pilar OOP
     - Abstraction &rarr; fokus ke hal penting, informasi disembunyikan. contoh: kemudi mobil
