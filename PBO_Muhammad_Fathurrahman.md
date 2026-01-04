@@ -36,11 +36,10 @@ Soal UAS (Pemrograman Berorientasi Objek)
         7. Masak
         8. Sajikan
     - Object Oriented Programming
-        1. Buat Class `Koki`, `Bahan`, `Alat`
-        2. Buat Objek `Bahan` (Telur, Royco)
-        3. Buat Objek `Alat` (Wajan, Kompor)
-        4. Panggil Objek `Koki` untuk melakukan method bikinTelurDadar()
-        5. Sajikan
+        1. Buat Class `Koki` dan `resepTelurDadar`
+        2. Buat method `masak()`
+        3. Panggil Objek `Koki` untuk melakukan method `masak(resepTelurDadar)`
+        4. Sajikan
     &nbsp;
 
 2. Sebutkan 4 pilar dari OOP, kemudian jelaskan kegunaannya dan berikan 1 contoh penerapannya.
@@ -70,13 +69,12 @@ Soal UAS (Pemrograman Berorientasi Objek)
         - method baru: `dicukur()`
         &nbsp;
     4. Polymorphism
-        Class memiliki banyak perilaku berbeda dari satu method yang sama, tergantung pada objek mana yang memanggilnya. Polymorph memiliki 2 cara penerapan:
-        1. Overriding &rarr; Method di Child class memiliki nama method yang sama dengan Parent class tapi perilaku berbeda. Child class mengubah cara kerja method yang diwarisi dari parent class karena child class punya "versi sendiri" yang unik. 
-        2. Overload &rarr; Method dengan nama yang sama di class yang sama, tetapi parameternya berbeda. 
-    
-        Kegunaannya
-        Contohnya: 
+        Class memiliki banyak perilaku berbeda dari satu method yang sama, tergantung pada objek mana yang memanggilnya. Kegunaannya kode jadi lebih fleksibel dan mengurangi jumlah penggunaan if-else. Polymorph memiliki 2 cara penerapan:
+        1. Overriding &rarr; Method di Child class memiliki nama yang sama dengan Parent class tapi perilakunya berbeda. Child class mengubah cara kerja method yang diwarisi dari parent class karena child class punya "versi sendiri" yang unik. 
+        Contoh: 
         Method attack() akan berbeda perilakunya objek mana yang memanggil. Saat Objek Pemanah manggil method attack() maka dia akan menyerang dengan menembak anak panah, sedangkan Penyihir akan menyerang dengan mantra.
+        2. Overload &rarr; Method dengan nama yang sama di class yang sama, tetapi parameternya berbeda. 
+        Contoh ada method masak("Nasi Goreng") maka hanya akan memasak Nasi Goreng 1 porsi, sedangkan jika masak("Nasi Goreng", 3) akan memasak Nasi Goreng 3 porsi.
 
         &nbsp;
 3. Sebagai Software Engineer, kita dituntut untuk bisa memodelkan aplikasi yang akan dikembangkan agar tidak keluar dari perencanaan dan kebutuhan. Modelkanlah suatu aplikasi sederhana dengan konsep OOP (minimal mengaplikasikan 2 konsep OOP) dalam bentuk class diagram. Kemudian jelaskanlah diagram tersebut dengan menyebutkan bagian mana yang menggunakan konsep apa dari OOP.
@@ -101,7 +99,7 @@ Soal UAS (Pemrograman Berorientasi Objek)
     
     Kelebihan OOP
     - Reusabilty &rarr; dapat digunakan lagi di program lain
-    - Maintanabilitu &rarr; mudah dibaca dan dikelola
+    - Maintanability &rarr; mudah dibaca dan dikelola
     - 
 
     &nbsp;
