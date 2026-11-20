@@ -1,203 +1,845 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muhammad Fathurrahman — Web Developer Portfolio</title>
+  <meta name="description" content="Official portfolio of Muhammad Fathurrahman (Fathur), Web Developer and Informatics Engineering student at Politeknik Negeri Lhokseumawe. Experienced in building web and mobile applications with Laravel, PHP, JavaScript, Bootstrap, and Flutter.">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="Muhammad Fathurrahman — Web Developer Portfolio">
+  <meta property="og:description" content="Web and mobile projects crafted by Muhammad Fathurrahman using Laravel, PHP, JavaScript, Bootstrap, and Flutter.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://fyou00.github.io/">
+  <meta name="theme-color" content="#140E0B">
+
+  <!-- Inline SVG Favicon (Brown Glass Monogram) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%23B86B4B'/%3E%3Cstop offset='100%25' stop-color='%235A2D1E'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='18' fill='url(%23g)'/%3E%3Ctext x='50%25' y='53%25' dominant-baseline='middle' text-anchor='middle' font-family='system-ui,sans-serif' font-weight='800' font-size='32' fill='%23FAF3EC'%3EF%3C/text%3E%3C/svg%3E">
+
+  <!-- Fonts: Plus Jakarta Sans & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="shortcut icon" href="#">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6.7.2 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="style.css">
-  <title>My Portofolio</title>
 </head>
-
 <body>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container">
-      <a class="d-block d-md-none btn backtoindex" href="/"><i class="fa-solid fa-arrow-left"></i></a>
-      <a class="navbar-brand" href="#">
-        <!-- <img src="fontawesome/svgs/solid/burst.svg" alt="Logo" width="30" height="28" class="d-inline-block align-text-top me-1"> -->
-        My Portofolio
+  <!-- Skip Link for Accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Ambient Brown Glassmorphism Background Layer -->
+  <div class="ambient-bg" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="orb orb-4"></div>
+    <div class="bg-grid"></div>
+    <div class="bg-noise"></div>
+  </div>
+
+  <!-- Floating Glass Navbar -->
+  <header class="site-header" id="top">
+    <nav class="navbar glass-pill" aria-label="Main navigation">
+      <a href="#home" class="brand" aria-label="Muhammad Fathurrahman Home">
+        <span class="brand-mark" aria-hidden="true">F</span>
+        <span class="brand-text">Fathur<span class="brand-dot">.</span></span>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button
+          type="button"
+          class="icon-btn theme-toggle"
+          id="theme-toggle"
+          aria-label="Switch to Warm Latte theme"
+          title="Switch Espresso / Warm Latte theme"
+        >
+          <i class="fa-solid fa-sun" aria-hidden="true"></i>
+        </button>
+
+        <a href="#contact" class="btn btn-primary btn-sm nav-cta">
+          Hire Me
+        </a>
+
+        <button
+          type="button"
+          class="icon-btn menu-toggle"
+          id="menu-toggle"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Glass Drawer -->
+    <div class="mobile-menu glass-card" id="mobile-menu" hidden>
+      <ul class="mobile-nav-links">
+        <li><a href="#home" class="mobile-link">Home</a></li>
+        <li><a href="#about" class="mobile-link">About</a></li>
+        <li><a href="#services" class="mobile-link">Services</a></li>
+        <li><a href="#projects" class="mobile-link">Projects</a></li>
+        <li><a href="#contact" class="mobile-link">Contact</a></li>
+      </ul>
+      <a href="#contact" class="btn btn-primary mobile-cta">Get in Touch</a>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ==================== HERO SECTION ==================== -->
+    <section id="home" class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <div class="status-badge glass-chip">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span>Open for Web Projects &amp; Collaborations</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm
+            <span class="text-gradient">Muhammad Fathurrahman</span>
+          </h1>
+
+          <p class="hero-role">
+            <span class="mono-tag">&lt;Web Developer /&gt;</span>
+            <span class="role-sep" aria-hidden="true">·</span>
+            <span>Informatics Engineering Student</span>
+          </p>
+
+          <p class="hero-desc">
+            Building fast, responsive, and well-structured web and mobile applications.
+            Focused on full-stack web development with Laravel, PHP, and JavaScript, alongside cross-platform mobile exploration with Flutter.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <span>View Projects</span>
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+            <a href="#contact" class="btn btn-glass">
+              <i class="fa-regular fa-paper-plane" aria-hidden="true"></i>
+              <span>Contact Me</span>
+            </a>
+          </div>
+
+          <div class="social-row" aria-label="Social media links">
+            <a
+              href="https://github.com/fyou00"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-btn glass-chip"
+              aria-label="Muhammad Fathurrahman on GitHub"
+              title="GitHub"
+            >
+              <i class="fa-brands fa-github" aria-hidden="true"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/muhammad-fathurrahman-75075125a/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-btn glass-chip"
+              aria-label="Muhammad Fathurrahman on LinkedIn"
+              title="LinkedIn"
+            >
+              <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/fyou.png/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-btn glass-chip"
+              aria-label="fyou.png on Instagram"
+              title="Instagram"
+            >
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a
+              href="https://api.whatsapp.com/send/?phone=%2B62895600527774&text&type=phone_number&app_absent=0"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-btn glass-chip"
+              aria-label="Message Muhammad Fathurrahman on WhatsApp"
+              title="WhatsApp"
+            >
+              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Visual Glass Portrait Card -->
+        <div class="hero-visual reveal" data-delay="120">
+          <div class="portrait-card glass-card">
+            <div class="portrait-frame">
+              <img
+                src="assets/IMG_2092.JPEG"
+                alt="Portrait of Muhammad Fathurrahman"
+                class="portrait-img"
+                width="340"
+                height="340"
+              >
+            </div>
+
+            <div class="portrait-meta">
+              <div>
+                <p class="portrait-name">Fathur</p>
+                <p class="portrait-loc">
+                  <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                  Lhokseumawe, Aceh
+                </p>
+              </div>
+              <span class="glass-chip mono-pill">Web &amp; Mobile</span>
+            </div>
+
+            <!-- Floating Mini Glass Badges -->
+            <div class="float-badge float-badge-top glass-card" aria-hidden="true">
+              <i class="fa-brands fa-laravel"></i>
+              <div>
+                <strong>Laravel &amp; PHP</strong>
+                <span>Full-Stack Web</span>
+              </div>
+            </div>
+
+            <div class="float-badge float-badge-bottom glass-card" aria-hidden="true">
+              <i class="fa-solid fa-layer-group"></i>
+              <div>
+                <strong>5+ Projects</strong>
+                <span>Web &amp; Flutter</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ABOUT & SKILLS SECTION ==================== -->
+    <section id="about" class="about section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow mono-tag">01 / ABOUT ME</span>
+          <h2 class="section-title">About Me &amp; Technical Skills</h2>
+          <p class="section-subtitle">
+            My academic background, industry internship experience, and the core technologies I use to turn ideas into digital products.
+          </p>
+        </div>
+
+        <div class="about-bento">
+          <!-- Bio Card -->
+          <article class="glass-card bento-bio reveal">
+            <div class="card-badge mono-tag">Profile</div>
+            <h3>Hi, I'm Muhammad Fathurrahman</h3>
+            <p>
+              Commonly known as <strong>Fathur</strong>, I'm based in Hagu Selatan, Lhokseumawe, Aceh. I am currently pursuing a degree in
+              <strong>Informatics Engineering</strong> within the Department of Information Technology &amp; Computer at
+              <strong>Politeknik Negeri Lhokseumawe</strong>.
+            </p>
+            <p>
+              With a strong foundation in <strong>Software Engineering (RPL)</strong> from SMK Negeri 1 Lhokseumawe and hands-on industry internship experience in Depok,
+              I believe thoughtfully engineered technology can create meaningful, real-world impact.
+            </p>
+
+            <div class="stats-row">
+              <div class="stat-item">
+                <span class="stat-num">5+</span>
+                <span class="stat-label">Completed Projects</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-num">8+</span>
+                <span class="stat-label">Core Technologies</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-num">SWE</span>
+                <span class="stat-label">Software Foundation</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Education & Experience Timeline Card -->
+          <article class="glass-card bento-timeline reveal" data-delay="100">
+            <div class="card-badge mono-tag">Journey</div>
+            <h3>Education &amp; Experience</h3>
+            <ol class="timeline">
+              <li class="timeline-item">
+                <span class="timeline-dot" aria-hidden="true"></span>
+                <div class="timeline-body">
+                  <span class="timeline-date mono-tag">Present</span>
+                  <h4>Politeknik Negeri Lhokseumawe</h4>
+                  <p>Informatics Engineering — Department of Information Technology &amp; Computer</p>
+                </div>
+              </li>
+              <li class="timeline-item">
+                <span class="timeline-dot" aria-hidden="true"></span>
+                <div class="timeline-body">
+                  <span class="timeline-date mono-tag">2023</span>
+                  <h4>Internship — PT. Amanah Karya Indonesia</h4>
+                  <p>Depok · Built the ManfaApps cross-platform mobile application using Flutter</p>
+                </div>
+              </li>
+              <li class="timeline-item">
+                <span class="timeline-dot" aria-hidden="true"></span>
+                <div class="timeline-body">
+                  <span class="timeline-date mono-tag">Alumnus</span>
+                  <h4>SMK Negeri 1 Lhokseumawe</h4>
+                  <p>Software Engineering (RPL) · Final Competency Project: Fujisnap</p>
+                </div>
+              </li>
+            </ol>
+          </article>
+
+          <!-- Skills Card (Full Width) -->
+          <article class="glass-card bento-skills reveal" data-delay="150">
+            <div class="skills-head">
+              <div>
+                <div class="card-badge mono-tag">Tech Stack</div>
+                <h3>Technical Skills</h3>
+              </div>
+              <p class="skills-note">Core languages, frameworks, and tools I work with to build modern applications.</p>
+            </div>
+
+            <div class="skills-groups">
+              <div class="skill-group">
+                <h4 class="skill-group-title">
+                  <i class="fa-solid fa-code" aria-hidden="true"></i>
+                  Front-End
+                </h4>
+                <div class="skill-chips">
+                  <span class="skill-chip glass-chip"><i class="fa-brands fa-html5" aria-hidden="true"></i> HTML5</span>
+                  <span class="skill-chip glass-chip"><i class="fa-brands fa-css3-alt" aria-hidden="true"></i> CSS3</span>
+                  <span class="skill-chip glass-chip"><i class="fa-brands fa-js" aria-hidden="true"></i> JavaScript</span>
+                  <span class="skill-chip glass-chip"><i class="fa-brands fa-bootstrap" aria-hidden="true"></i> Bootstrap</span>
+                </div>
+              </div>
+
+              <div class="skill-group">
+                <h4 class="skill-group-title">
+                  <i class="fa-solid fa-server" aria-hidden="true"></i>
+                  Back-End &amp; Database
+                </h4>
+                <div class="skill-chips">
+                  <span class="skill-chip glass-chip"><i class="fa-brands fa-php" aria-hidden="true"></i> PHP</span>
+                  <span class="skill-chip glass-chip"><i class="fa-brands fa-laravel" aria-hidden="true"></i> Laravel</span>
+                  <span class="skill-chip glass-chip"><i class="fa-solid fa-database" aria-hidden="true"></i> MySQL</span>
+                </div>
+              </div>
+
+              <div class="skill-group">
+                <h4 class="skill-group-title">
+                  <i class="fa-solid fa-mobile-screen" aria-hidden="true"></i>
+                  Mobile &amp; Tools
+                </h4>
+                <div class="skill-chips">
+                  <span class="skill-chip glass-chip"><i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i> Flutter</span>
+                  <span class="skill-chip glass-chip"><i class="fa-brands fa-git-alt" aria-hidden="true"></i> Git &amp; GitHub</span>
+                  <span class="skill-chip glass-chip"><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i> Responsive UI</span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SERVICES SECTION ==================== -->
+    <section id="services" class="services section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow mono-tag">02 / SERVICES</span>
+          <h2 class="section-title">What I Can Build for You</h2>
+          <p class="section-subtitle">
+            Clean, maintainable web and mobile solutions tailored for performance and seamless responsiveness across every device.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card glass-card reveal">
+            <div class="service-icon glass-chip">
+              <i class="fa-solid fa-laptop-code" aria-hidden="true"></i>
+            </div>
+            <h3>Front-End Development</h3>
+            <p>
+              Translating concepts and layouts into clean, responsive interfaces that feel effortless on both desktop and mobile screens.
+            </p>
+            <ul class="service-tags">
+              <li>HTML5 &amp; CSS3</li>
+              <li>JavaScript</li>
+              <li>Bootstrap</li>
+            </ul>
+          </article>
+
+          <article class="service-card glass-card reveal" data-delay="100">
+            <div class="service-icon glass-chip">
+              <i class="fa-solid fa-cubes" aria-hidden="true"></i>
+            </div>
+            <h3>Full-Stack Web Apps</h3>
+            <p>
+              Developing dynamic web systems complete with user authentication, content management, MySQL integration, and Laravel MVC architecture.
+            </p>
+            <ul class="service-tags">
+              <li>Laravel</li>
+              <li>PHP</li>
+              <li>MySQL</li>
+            </ul>
+          </article>
+
+          <article class="service-card glass-card reveal" data-delay="200">
+            <div class="service-icon glass-chip">
+              <i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i>
+            </div>
+            <h3>Mobile UI &amp; Apps</h3>
+            <p>
+              Creating cross-platform mobile applications with Flutter, focusing on intuitive navigation and smooth user interactions.
+            </p>
+            <ul class="service-tags">
+              <li>Flutter</li>
+              <li>Mobile UI</li>
+              <li>Cross-Platform</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PROJECTS SECTION ==================== -->
+    <section id="projects" class="projects section">
+      <div class="container">
+        <div class="section-header projects-header reveal">
+          <div>
+            <span class="section-eyebrow mono-tag">03 / PORTFOLIO</span>
+            <h2 class="section-title">Selected Projects</h2>
+            <p class="section-subtitle">
+              A curated showcase of web and mobile applications I've built across academic coursework, competency exams, and industry internships.
+            </p>
+          </div>
+
+          <!-- Filter Tabs -->
+          <div class="filter-bar glass-pill" role="tablist" aria-label="Filter projects by category">
+            <button type="button" class="filter-btn active" role="tab" aria-selected="true" data-filter="all">All</button>
+            <button type="button" class="filter-btn" role="tab" aria-selected="false" data-filter="webapp">Web App</button>
+            <button type="button" class="filter-btn" role="tab" aria-selected="false" data-filter="landing">Landing Page</button>
+            <button type="button" class="filter-btn" role="tab" aria-selected="false" data-filter="mobile">Mobile</button>
+          </div>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: Fujisnap (Featured) -->
+          <article class="project-card glass-card project-featured reveal" data-category="webapp">
+            <div class="project-media">
+              <img
+                src="assets/fujisnap.jpg"
+                alt="Fujisnap photo-sharing social web application interface"
+                loading="lazy"
+              >
+              <span class="project-category glass-pill mono-tag">Web App · Final Exam</span>
+            </div>
+            <div class="project-body">
+              <div class="project-top">
+                <h3>Fujisnap Web App</h3>
+                <p>
+                  A photo-sharing social media platform built as my Vocational High School Competency Exam (UKK) project, featuring user authentication, photo uploads, and full CRUD gallery management.
+                </p>
+              </div>
+              <div class="project-footer">
+                <ul class="tech-list" aria-label="Technologies used">
+                  <li>PHP</li>
+                  <li>Bootstrap</li>
+                  <li>MySQL</li>
+                </ul>
+                <button
+                  type="button"
+                  class="btn-link project-detail-btn"
+                  data-project="fujisnap"
+                >
+                  Details <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: ManfaApps -->
+          <article class="project-card glass-card reveal" data-category="mobile" data-delay="80">
+            <div class="project-media">
+              <img
+                src="assets/manfaapps.png"
+                alt="Multi-screen showcase of the ManfaApps Flutter mobile application"
+                loading="lazy"
+              >
+              <span class="project-category glass-pill mono-tag">Mobile · Internship 2023</span>
+            </div>
+            <div class="project-body">
+              <div class="project-top">
+                <h3>ManfaApps Mobile</h3>
+                <p>
+                  A cross-platform mobile application developed with Flutter during my 2023 industry internship at PT. Amanah Karya Indonesia in Depok.
+                </p>
+              </div>
+              <div class="project-footer">
+                <ul class="tech-list" aria-label="Technologies used">
+                  <li>Flutter</li>
+                  <li>Dart</li>
+                  <li>Mobile UI</li>
+                </ul>
+                <button
+                  type="button"
+                  class="btn-link project-detail-btn"
+                  data-project="manfaapps"
+                >
+                  Details <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Laravel Blog Platform -->
+          <article class="project-card glass-card reveal" data-category="webapp" data-delay="120">
+            <div class="project-media">
+              <img
+                src="assets/myfirstapp.jpg"
+                alt="Laravel Blog Platform web application interface"
+                loading="lazy"
+              >
+              <span class="project-category glass-pill mono-tag">Web App</span>
+            </div>
+            <div class="project-body">
+              <div class="project-top">
+                <h3>Laravel Blog Platform</h3>
+                <p>
+                  A dynamic blog web application built with the Laravel framework, implementing MVC architecture, modern routing, article management, and category filtering.
+                </p>
+              </div>
+              <div class="project-footer">
+                <ul class="tech-list" aria-label="Technologies used">
+                  <li>Laravel</li>
+                  <li>PHP</li>
+                  <li>Blade</li>
+                  <li>MySQL</li>
+                </ul>
+                <button
+                  type="button"
+                  class="btn-link project-detail-btn"
+                  data-project="blog"
+                >
+                  Details <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: Rumah Impian Website -->
+          <article class="project-card glass-card reveal" data-category="landing" data-delay="80">
+            <div class="project-media">
+              <img
+                src="assets/rumahimpian.png"
+                alt="Rumah Impian real estate property landing page"
+                loading="lazy"
+              >
+              <span class="project-category glass-pill mono-tag">Landing Page</span>
+            </div>
+            <div class="project-body">
+              <div class="project-top">
+                <h3>Rumah Impian Website</h3>
+                <p>
+                  A modern real estate landing page designed to help visitors browse and discover trusted homes for sale or rent through a clear visual hierarchy.
+                </p>
+              </div>
+              <div class="project-footer">
+                <ul class="tech-list" aria-label="Technologies used">
+                  <li>HTML5</li>
+                  <li>CSS3</li>
+                  <li>Bootstrap</li>
+                </ul>
+                <button
+                  type="button"
+                  class="btn-link project-detail-btn"
+                  data-project="rumahimpian"
+                >
+                  Details <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5: Starbucks Concept Website -->
+          <article class="project-card glass-card reveal" data-category="landing" data-delay="120">
+            <div class="project-media">
+              <img
+                src="assets/starbucks.png"
+                alt="Starbucks commercial concept landing page"
+                loading="lazy"
+              >
+              <span class="project-category glass-pill mono-tag">Landing Page</span>
+            </div>
+            <div class="project-body">
+              <div class="project-top">
+                <h3>Starbucks Concept Website</h3>
+                <p>
+                  A commercial landing page exploration showcasing specialty coffee, handcrafted teas, and pastries with clean product-focused visual composition.
+                </p>
+              </div>
+              <div class="project-footer">
+                <ul class="tech-list" aria-label="Technologies used">
+                  <li>HTML5</li>
+                  <li>CSS3</li>
+                  <li>JavaScript</li>
+                </ul>
+                <button
+                  type="button"
+                  class="btn-link project-detail-btn"
+                  data-project="starbucks"
+                >
+                  Details <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="projects-cta reveal">
+          <a
+            href="https://github.com/fyou00"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-glass"
+          >
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+            <span>Explore More Repositories on GitHub</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT SECTION ==================== -->
+    <section id="contact" class="contact section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow mono-tag">04 / CONTACT</span>
+          <h2 class="section-title">Let's Work Together</h2>
+          <p class="section-subtitle">
+            Have a project in mind, need a website built, or want to discuss tech? Feel free to reach out anytime.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Info Cards -->
+          <div class="contact-info reveal">
+            <div class="contact-item glass-card">
+              <div class="contact-icon glass-chip">
+                <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+              </div>
+              <div class="contact-detail">
+                <span class="contact-label">WhatsApp</span>
+                <a
+                  href="https://api.whatsapp.com/send/?phone=%2B62895600527774&text&type=phone_number&app_absent=0"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="contact-value"
+                >
+                  +62 895-6005-27774
+                </a>
+              </div>
+              <a
+                href="https://api.whatsapp.com/send/?phone=%2B62895600527774&text&type=phone_number&app_absent=0"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="icon-btn"
+                aria-label="Chat on WhatsApp"
+              >
+                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+              </a>
+            </div>
+
+            <div class="contact-item glass-card">
+              <div class="contact-icon glass-chip">
+                <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+              </div>
+              <div class="contact-detail">
+                <span class="contact-label">Email</span>
+                <a
+                  href="mailto:muhammadfathurrahman012@gmail.com"
+                  class="contact-value contact-email"
+                >
+                  muhammadfathurrahman012@gmail.com
+                </a>
+              </div>
+              <button
+                type="button"
+                class="icon-btn copy-email-btn"
+                id="copy-email"
+                data-email="muhammadfathurrahman012@gmail.com"
+                aria-label="Copy email address"
+                title="Copy email"
+              >
+                <i class="fa-regular fa-copy" aria-hidden="true"></i>
+              </button>
+            </div>
+
+            <div class="contact-item glass-card">
+              <div class="contact-icon glass-chip">
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+              </div>
+              <div class="contact-detail">
+                <span class="contact-label">Location</span>
+                <a
+                  href="https://maps.app.goo.gl/HwbCwb9w7tSLX4xR7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="contact-value"
+                >
+                  Jl. Samudera No. 151, Hagu Selatan, Banda Sakti, Lhokseumawe, Aceh, Indonesia
+                </a>
+              </div>
+              <a
+                href="https://maps.app.goo.gl/HwbCwb9w7tSLX4xR7"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="icon-btn"
+                aria-label="Open location in Google Maps"
+              >
+                <i class="fa-solid fa-map-location-dot" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Direct WhatsApp Message Form -->
+          <form class="contact-form glass-card reveal" id="wa-form" data-delay="120">
+            <h3>Send a Quick Message</h3>
+            <p class="form-hint">Your message will open directly in WhatsApp for the fastest response.</p>
+
+            <div class="form-group">
+              <label for="sender-name">Your Name</label>
+              <input
+                type="text"
+                id="sender-name"
+                name="name"
+                placeholder="e.g., Alex Morgan"
+                required
+                autocomplete="name"
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="sender-topic">Topic</label>
+              <select id="sender-topic" name="topic">
+                <option value="Website Development">Website Development</option>
+                <option value="Full-Stack Web App (Laravel / PHP)">Full-Stack Web App (Laravel / PHP)</option>
+                <option value="Project Collaboration">Project Collaboration</option>
+                <option value="General Inquiry">General Inquiry</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="sender-message">Message</label>
+              <textarea
+                id="sender-message"
+                name="message"
+                rows="4"
+                placeholder="Tell me a bit about your project or question..."
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full">
+              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+              <span>Send via WhatsApp</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-card glass-card">
+        <div class="footer-brand">
+          <a href="#home" class="brand">
+            <span class="brand-mark" aria-hidden="true">F</span>
+            <span class="brand-text">Fathur<span class="brand-dot">.</span></span>
+          </a>
+          <p>Web Developer · Politeknik Negeri Lhokseumawe</p>
+        </div>
+
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="footer-socials">
+          <a href="https://github.com/fyou00" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+          <a href="https://www.linkedin.com/in/muhammad-fathurrahman-75075125a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+          <a href="https://www.instagram.com/fyou.png/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+          <a href="mailto:muhammadfathurrahman012@gmail.com" aria-label="Email"><i class="fa-regular fa-envelope" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="year">2026</span> Muhammad Fathurrahman. All rights reserved.</p>
+        <a href="#top" class="back-top-link">
+          Back to top <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== PROJECT DETAIL MODAL ==================== -->
+  <div class="modal-overlay" id="project-modal" hidden role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-dialog glass-card">
+      <button type="button" class="icon-btn modal-close" id="modal-close" aria-label="Close project preview">
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
       </button>
-      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-        <div class="navbar-nav m-auto">
-          <a href="#home" class="nav-link active">Home</a>
-          <a href="#aboutme" class="nav-link">About Me</a>
-          <a href="#services" class="nav-link">Services</a>
-          <a href="#portofolio" class="nav-link">Portofolio</a>
-          <a href="#contact" class="nav-link">Contact</a>
-        </div>
-      </div>
-    </div>
-  </nav>
 
-  <!-- home -->
-  <div class="home" id="home">
-    <div class="container py-2 py-md-5">
-      <div class="row justify-content-center align-items-center py-md-5">
-        <div class="col-sm-8 col-md-6">
-          <h1 class="fw-bold">I am <i style="font-style: normal; color: #854836;">Muhammad Fathurrahman</i></h1>
-          <h2>I'm a Web Developer</h2>
-          <br>
-          <p>welkam tu my portofolio website😋, disini adalah tempat aku nyimpan beberapa project yang pernah
-            ku buat sebelumnya. pastinya bakal kereennn‼️</p>
-          <br>
-          <div class="d-none d-md-block">
-            <a target="_blank"
-              href="https://api.whatsapp.com/send/?phone=%2B62895600527774&text&type=phone_number&app_absent=0"><i
-                class="text-black fa-brands fa-whatsapp mx-3" style="font-size: 36px;"></i></a>
-            <a target="_blank" href="https://www.instagram.com/fyou.png/"><i
-                class="text-black fa-brands fa-instagram mx-3" style="font-size: 36px;"></i></a>
-            <a target="_blank" href="https://github.com/fyou00"><i class="text-black fa-brands fa-github mx-3"
-                style="font-size: 36px;"></i></a>
-            <a target="_blank" href="https://www.linkedin.com/in/muhammad-fathurrahman-75075125a/"><i
-                class="text-black fa-brands fa-linkedin mx-3" style="font-size: 36px;"></i></a>
-          </div>
-          <div class="d-flex d-md-none justify-content-center">
-            <img src="assets/IMG_2092.JPEG" class="rounded-circle" alt="img" style="width: 240px; height: 240px;">
-          </div>
-          <div class="d-flex d-md-none justify-content-center mt-5">
-            <a target="_blank"
-              href="https://api.whatsapp.com/send/?phone=%2B62895600527774&text&type=phone_number&app_absent=0"><i
-                class="text-black fa-brands fa-whatsapp mx-3" style="font-size: 36px;"></i></a>
-            <a target="_blank" href="https://www.instagram.com/fyou.png/"><i
-                class="text-black fa-brands fa-instagram mx-3" style="font-size: 36px;"></i></a>
-            <a target="_blank" href="https://github.com/fyou0"><i class="text-black fa-brands fa-github mx-3"
-                style="font-size: 36px;"></i></a>
-            <a target="_blank" href="https://www.linkedin.com/in/muhammad-fathurrahman-75075125a/"><i
-                class="text-black fa-brands fa-linkedin mx-3" style="font-size: 36px;"></i></a>
-          </div>
-        </div>
-        <div class="col-md-4 d-none d-md-flex justify-content-center">
-          <img src="assets/IMG_2092.JPEG" class="rounded-circle" alt="img" style="width: 240px; height: 240px;">
-        </div>
-      </div>
-    </div>
-  </div>
-  <hr>
-
-  <!-- about me -->
-  <div class="aboutme" id="aboutme">
-    <div class="container">
-      <div class="row d-flex">
-        <h1 class="text-center fw-bold my-2">About Me</h1> <br> <br> <br>
-        <div class="col-1 col-md-2"></div>
-        <div class="col-10 col-md-8">
-          <p class="text-center">hai haii!👋👋 kenalin nama ku Muhammad Fathurrahman biasa dipanggil "fathur", aku lahir di Hagu Selatan, Lhokseumawe dan aku berusia 19 tahun. Saat ini aku berkuliah di Politeknik Negeri Lhokseumawe Jurusan Teknologi Informasi dan Komputer pada Prodi Teknik Informatika. Selain itu, aku juga merupakan alumnus SMK Negeri 1 Lhokseumawe di Jurusan Rekayasa Perangkat Lunak. <strong id="services">Apa sih yang udah ku kerjain selama ini?</strong> Aku punya pengalaman dalam web
-            development dan udah ngerjain
-            beberapa proyek nih, List skill gwejh: 😎😎</p>
-          <ul>
-            <li>Pengembangan Front-end: HTML <i class="fa-brands fa-html5"></i>, CSS <i
-                class="fa-brands fa-css3-alt"></i>, JavaScript <i class="fa-brands fa-js"></i>.</li>
-            <li>Pengembangan Back-end: PHP <i class="fa-brands fa-php"></i>, MySQL <i class="fa-solid fa-database"></i>.
-            </li>
-            <li>Framework: Saya memiliki pengetahuan tentang Bootstrap <i class="fa-brands fa-bootstrap"></i>, dan juga Laravel <i class="fa-brands fa-laravel"></i>.</li>
-          </ul>
-          <p class="text-center">
-            Aku tertarik dengan dunia web development karena aku percaya bahwa teknologi dapat mengubah dunia. ANJAAAYYY SEDAPP WKWKKWKWKWKW
-          </p>
-        </div>
-        <div class="col-1 col-md-2"></div>
-      </div>
-    </div>
-  </div>
-  <hr>
-
-  <!-- portofolio -->
-  <div class="portofolio" id="portofolio">
-    <div class="container">
-      <h1 class="text-center fw-bold my-2 mb-2 mb-md-5">Apa sih yang udah ku bikin selama ini?</h1>
-
-      <div class="row shadow py-4 px-2 mb-3 bg-body-tertiary rounded">
-        <div class="col-md-6">
-          <h3>Website Rumah Impian</h3>
-          <p>Membantu Temukan Rumah Impian. Rumah Impian hadir untuk temukan <br>
-            rumah terbaik untukmu, untuk di jual ataupun di sewa dengan sumber terpercaya.</p>
-        </div>
-        <div class="col-md-6 d-flex justify-content-end">
-          <img src="assets/rumahimpian.png" class="img-fluid" alt="...">
-        </div>
+      <div class="modal-media">
+        <img id="modal-img" src="" alt="">
       </div>
 
-      <div class="row shadow py-4 px-2 mb-3 bg-body-tertiary">
-        <div class="col-md-6">
-          <img src="assets/starbucks.png" class="img-fluid" alt="...">
-        </div>
-        <div class="col-md-6 mt-3 text-end">
-          <h3>Website Contoh Starbucks</h3>
-          <p>Ini adalah contoh website untuk Starbucks. Starbucks dikenal <br> karena menyajikan berbagai jenis kopi,
-            minuman kopi spesial, <br> teh, dan makanan ringan.
-          </p>
-        </div>
-      </div>
+      <div class="modal-content">
+        <span class="mono-tag modal-badge" id="modal-category"></span>
+        <h3 id="modal-title"></h3>
+        <p id="modal-desc"></p>
 
-      <div class="row shadow py-4 px-2 mb-3 bg-body-tertiary rounded">
-        <div class="col-md-6">
-          <h3>Aplikasi ManfaApps</h3>
-          <p>Ini adalah aplikasi yang dibuat menggunakan bahasa pemrograman <br> Flutter
-            ManfaApps ini ku buat pas akuu PKL di PT. Amanah Karya Indonesia, oiyaaa aku PKL nya di Depok pas 2023</p>
+        <div class="modal-highlights">
+          <h4>Project Highlights</h4>
+          <ul id="modal-points"></ul>
         </div>
-        <div class="col-md-6 d-flex justify-content-end">
-          <img src="assets/manfaapps.png" class="img-fluid" alt="...">
-        </div>
-      </div>
 
-      <div class="row shadow py-4 px-2 mb-3 bg-body-tertiary rounded">
-        <div class="col-md-6 d-flex">
-          <img src="assets/fujisnap.jpg" class="img-fluid" alt="...">
-        </div>
-        <div class="col-md-6 mt-3 text-end">
-          <h3>Website Fujisnap</h3>
-          <p>Website ini merupakan tugas UKK saya saat SMK, website yang berfungsi sebagai tempat memposting foto-foto seperti sosial media pada umumnya, dibuild menggunakan bahasa PHP dan framework Bootstrap.</p>
-        </div>
-      </div>
-
-      <div class="row shadow py-4 px-2 mb-3 bg-body-tertiary rounded">
-        <div class="col-md-6">
-          <h3>Blog Sederhana</h3>
-          <p>Ini website blog sederhana menggunakan framework Laravel yang pertama pelajari dari channel Web Programming Unpas.</p>
-        </div>
-        <div class="col-md-6 d-flex justify-content-end">
-          <img src="assets/myfirstapp.jpg" class="img-fluid" alt="...">
-        </div>
-      </div>
-
-    </div>
-  </div>
-  <br>
-
-  <!-- contact -->
-  <div class="contact" id="contact">
-    <div class="container">
-      <div class="row d-flex">
-        <h2 class="text-center fw-bold my-2 mb-4">Hubungi saya</h2>
-        <div class="col-md-4 text-center">Whatsapp <br><a style="text-decoration: none;" class="text-primary"
+        <div class="modal-footer">
+          <ul class="tech-list" id="modal-tech"></ul>
+          <a
+            id="modal-link"
+            href="https://github.com/fyou00"
             target="_blank"
-            href="https://api.whatsapp.com/send/?phone=%2B62895600527774&text&type=phone_number&app_absent=0">+62895600527774</a>
+            rel="noopener noreferrer"
+            class="btn btn-primary btn-sm"
+          >
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+            <span>View on GitHub</span>
+          </a>
         </div>
-        <div class="col-md-4 text-center">Email <br><a style="text-decoration: none;" class="text-primary"
-            target="_blank"
-            href="https://mail.google.com/mail/u/example@gmail.com">muhammadfathurrahman012@gmail.com</a></div>
-        <div class="col-md-4 text-center">Alamat <br><a style="text-decoration: none;" class="text-primary"
-            target="_blank" href="https://maps.app.goo.gl/HwbCwb9w7tSLX4xR7">Jl. Samudera, No. 151 Hagu Sel., <br> Kec.
-            Banda Sakti, <br> Kota Lhokseumawe, Aceh</a></div>
       </div>
     </div>
   </div>
-  <br>
-  <br>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
+
+  <!-- Toast Notification -->
+  <div class="toast glass-pill" id="toast" role="status" aria-live="polite" hidden>
+    <i class="fa-solid fa-check-circle" aria-hidden="true"></i>
+    <span id="toast-text">Email address copied!</span>
+  </div>
+
+  <script src="script.js"></script>
 </body>
-
 </html>
