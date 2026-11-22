@@ -215,8 +215,8 @@
             <div class="float-badge float-badge-bottom glass-card" aria-hidden="true">
               <i class="fa-solid fa-layer-group"></i>
               <div>
-                <strong>5+ Projects</strong>
-                <span>Web &amp; Flutter</span>
+                <strong>7+ Projects</strong>
+                <span>Web, Mobile &amp; Game</span>
               </div>
             </div>
           </div>
@@ -252,11 +252,11 @@
 
             <div class="stats-row">
               <div class="stat-item">
-                <span class="stat-num">5+</span>
+                <span class="stat-num">7+</span>
                 <span class="stat-label">Completed Projects</span>
               </div>
               <div class="stat-item">
-                <span class="stat-num">8+</span>
+                <span class="stat-num">10+</span>
                 <span class="stat-label">Core Technologies</span>
               </div>
               <div class="stat-item">
@@ -318,6 +318,7 @@
                   <span class="skill-chip glass-chip"><i class="fa-brands fa-html5" aria-hidden="true"></i> HTML5</span>
                   <span class="skill-chip glass-chip"><i class="fa-brands fa-css3-alt" aria-hidden="true"></i> CSS3</span>
                   <span class="skill-chip glass-chip"><i class="fa-brands fa-js" aria-hidden="true"></i> JavaScript</span>
+                  <span class="skill-chip glass-chip"><i class="fa-solid fa-wind" aria-hidden="true"></i> Tailwind CSS</span>
                   <span class="skill-chip glass-chip"><i class="fa-brands fa-bootstrap" aria-hidden="true"></i> Bootstrap</span>
                 </div>
               </div>
@@ -427,14 +428,84 @@
           <div class="filter-bar glass-pill" role="tablist" aria-label="Filter projects by category">
             <button type="button" class="filter-btn active" role="tab" aria-selected="true" data-filter="all">All</button>
             <button type="button" class="filter-btn" role="tab" aria-selected="false" data-filter="webapp">Web App</button>
+            <button type="button" class="filter-btn" role="tab" aria-selected="false" data-filter="game">Game</button>
             <button type="button" class="filter-btn" role="tab" aria-selected="false" data-filter="landing">Landing Page</button>
             <button type="button" class="filter-btn" role="tab" aria-selected="false" data-filter="mobile">Mobile</button>
           </div>
         </div>
 
         <div class="projects-grid">
-          <!-- Project 1: Fujisnap (Featured) -->
+          <!-- Project 1: Kopi Paste (Featured) -->
           <article class="project-card glass-card project-featured reveal" data-category="webapp">
+            <div class="project-media">
+              <img
+                src="assets/kopi-paste.png"
+                alt="Kopi Paste specialty coffee roastery landing page and POS web application"
+                loading="lazy"
+              >
+              <span class="project-category glass-pill mono-tag">Web App · Full-Stack POS</span>
+            </div>
+            <div class="project-body">
+              <div class="project-top">
+                <h3>Kopi Paste — Cafe &amp; POS System</h3>
+                <p>
+                  A full-stack cafe storefront and Point of Sale (POS) web application built with Laravel 12. Combines an editorial public menu catalog with role-based Cashier POS order processing, printable receipts, and an Admin sales analytics dashboard.
+                </p>
+              </div>
+              <div class="project-footer">
+                <ul class="tech-list" aria-label="Technologies used">
+                  <li>Laravel 12</li>
+                  <li>PHP 8.2</li>
+                  <li>Tailwind CSS</li>
+                  <li>MySQL</li>
+                </ul>
+                <button
+                  type="button"
+                  class="btn-link project-detail-btn"
+                  data-project="kopipaste"
+                >
+                  Details <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Pixel Sky Striker -->
+          <article class="project-card glass-card reveal" data-category="game" data-delay="80">
+            <div class="project-media project-media-game">
+              <img
+                src="assets/pixel-sky-striker.png"
+                alt="Pixel Sky Striker 8-bit pixel-art arcade shooter gameplay screenshot"
+                loading="lazy"
+              >
+              <span class="project-category glass-pill mono-tag">Game · HTML5 Canvas</span>
+            </div>
+            <div class="project-body">
+              <div class="project-top">
+                <h3>Pixel Sky Striker</h3>
+                <p>
+                  A retro 8-bit pixel-art horizontal arcade shooter set across shifting blue, purple, and orange skies. Features synthesized Web Audio SFX, progressive waves, power-ups, combo multipliers, and touch-friendly arcade controls.
+                </p>
+              </div>
+              <div class="project-footer">
+                <ul class="tech-list" aria-label="Technologies used">
+                  <li>HTML5 Canvas</li>
+                  <li>JavaScript</li>
+                  <li>Web Audio API</li>
+                </ul>
+                <button
+                  type="button"
+                  class="btn-link project-detail-btn"
+                  data-project="pixelskystriker"
+                >
+                  Details <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Fujisnap -->
+          <article class="project-card glass-card reveal" data-category="webapp" data-delay="120">
             <div class="project-media">
               <img
                 src="assets/fujisnap.jpg"

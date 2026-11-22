@@ -5,7 +5,7 @@ Personal developer portfolio hosted on GitHub Pages at [fyou00.github.io](https:
 ## Features
 - **Dual Glassmorphism Themes:** Switch between **Dark Espresso** (default) and **Warm Latte** light mode with preference saved in `localStorage`.
 - **Responsive Bento & Grid Layout:** Built with semantic HTML5, modern CSS Grid/Flexbox, and zero CSS framework bloat.
-- **Interactive Portfolio Showcase:** Category filters (`All`, `Web App`, `Landing Page`, `Mobile`) and a glassmorphic project detail modal.
+- **Interactive Portfolio Showcase:** Category filters (`All`, `Web App`, `Game`, `Landing Page`, `Mobile`) and a glassmorphic project detail modal.
 - **Direct Contact Flow:** Working `mailto:` link with one-click copy-to-clipboard toast, Google Maps location link, and a WhatsApp quick-message composer.
 - **Accessibility:** Proper heading hierarchy, ARIA labels, keyboard-accessible modal (`Esc` to close), focus rings, and `prefers-reduced-motion` support.
 

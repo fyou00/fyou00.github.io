@@ -197,6 +197,38 @@
   // 9. Project Detail Modal
   // --------------------------------------------------------------------------
   const PROJECT_DATA = {
+    kopipaste: {
+      category: 'Web App · Laravel 12 Cafe & POS System',
+      title: 'Kopi Paste — Cafe & POS System',
+      image: 'assets/kopi-paste.png',
+      fallback: 'https://fyou00.github.io/assets/kopi-paste.png',
+      alt: 'Preview of Kopi Paste cafe storefront and Laravel 12 POS web application',
+      description:
+        'Kopi Paste is a full-stack cafe website and Point of Sale (POS) application built with Laravel 12. It connects a public specialty roastery storefront and live-searchable menu catalog with operational Cashier POS workflows and an executive Admin dashboard.',
+      points: [
+        'Role-based authentication (Admin & Cashier) with dedicated dashboards and middleware guards.',
+        'Interactive Cashier POS order screen supporting Dine-In/Take Away, cash/QRIS/card payments, change calculator, and print-ready receipts.',
+        'Admin management for menus, table occupancy, and sales reports with hourly/daily charts, printable summaries, and CSV export.'
+      ],
+      tech: ['Laravel 12', 'PHP 8.2', 'Blade', 'Tailwind CSS', 'MySQL'],
+      link: 'https://github.com/fyou00/kopi-paste'
+    },
+    pixelskystriker: {
+      category: 'Web Game · Retro 8-Bit Arcade Shooter',
+      title: 'Pixel Sky Striker',
+      image: 'assets/pixel-sky-striker.png',
+      fallback: 'https://fyou00.github.io/assets/pixel-sky-striker.png',
+      alt: 'Gameplay preview of Pixel Sky Striker retro 8-bit web arcade shooter',
+      description:
+        'Pixel Sky Striker is a browser-based pixel-art fighter jet shooter built with vanilla JavaScript and HTML5 Canvas—featuring a locked horizontal rail mechanic, crisp 240×360 pixel rendering, dynamic sky palettes per level, and pure Web Audio API 8-bit sound synthesis.',
+      points: [
+        'Dynamic level progression with evolving sky palettes and enemy waves (meteors, drones, mines, bombers, and UFOs).',
+        'Real-time 8-bit retro SFX synthesized directly via Web Audio API with zero external audio assets or game engines.',
+        'Combo multiplier up to x3, persistent localStorage high scores, power-ups (3X Spread, Rapid Fire, Shield, +1 Life), and keyboard/touch controls.'
+      ],
+      tech: ['HTML5 Canvas', 'Vanilla JS', 'Web Audio API', 'CSS3'],
+      link: 'https://github.com/fyou00/pixel-sky-striker'
+    },
     fujisnap: {
       category: 'Web App · Final Competency Exam (UKK)',
       title: 'Fujisnap Web App',
